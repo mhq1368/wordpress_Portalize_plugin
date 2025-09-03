@@ -1,0 +1,319 @@
+@font-face {
+    font-family: 'IRANYekanXFaNum';
+    src: url('../fonts/IRANYekanXFaNum-Medium.woff2') format('woff2'),
+        url('../fonts/IRANYekanXFaNum-Medium.woff') format('woff'),
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+    font-family: 'IRANYekanXFaNum' !important;
+}
+
+
+#portaliz-login {
+  --bg: #f5f7fb;
+  --panel: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #1e88e5;   /* آبی دکمه */
+  --primary-hover: #1565c0;
+  --border: #e5e7eb;
+  --danger: #e53935;    /* تیتر قرمز بالای بنر */
+  margin: 0;
+  height: 100%;
+  font-family: "IRANYekanXFaNum", system-ui, -apple-system, Segoe UI, Tahoma, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+#portaliz-login * {
+  box-sizing: border-box;
+}
+
+/* لایه‌بندی اصلی: بنر + پنل ورود */
+#portaliz-login .layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 0;
+  direction: ltr;
+}
+
+/* ستون بنر */
+#portaliz-login .hero {
+  position: relative;
+  overflow: hidden;
+  background-image: url('../img/1.png');
+  background-color: #ddd;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#portaliz-login .hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(255,255,255,.2), rgba(255,255,255,.15));
+  pointer-events: none;
+}
+
+#portaliz-login .hero-content {
+  padding: 25px;
+}
+
+#portaliz-login .hero-top {
+  text-align: center;
+  font-weight: 800;
+  color: var(--danger);
+  font-size: 18px;
+  margin-top: 6px;
+  text-shadow: 0 0 2px rgba(255,255,255,.6);
+  padding-bottom: 20px;
+}
+
+#portaliz-login .hero-text {
+  max-width: 100%;
+  margin: 16px auto 0;
+  line-height: 1.9;
+  font-size: 15px;
+  color: #111827;
+  text-align: center;
+  background: rgba(255,255,255,.55);
+  padding: 10px 14px;
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+}
+
+#portaliz-login .footer {
+  position: relative;
+  overflow: hidden;
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+#portaliz-login .footer p {
+  text-align: center;
+}
+
+/* ستون پنل ورود */
+#portaliz-login aside.login {
+  background: linear-gradient(to bottom left, #cfe2f9 0%, #cfe2f9 25%, #ffffff 50%, #ffffff 95%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  border-left: 1px solid var(--border);
+  direction: rtl;
+}
+
+#portaliz-login .card {
+  width: 100%;
+}
+
+/* سربرگ کارت: لوگو + عنوان */
+#portaliz-login .brand {
+  width: 100%;
+  text-align: center;
+}
+
+#portaliz-login .brand h1 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 800;
+}
+
+#portaliz-login .brand small {
+  display: block;
+  color: var(--muted);
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+/* فرم */
+#portaliz-login form {
+  margin-top: 10px;
+}
+
+#portaliz-login .field {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+#portaliz-login label {
+  font-size: 13px;
+  color: #374151;
+  font-weight: 700;
+}
+
+#portaliz-login input[type="text"],
+#portaliz-login input[type="password"],
+#portaliz-login input[type="email"] {
+  width: 100%;
+  padding: 15px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #f9fafb;
+  color: #111827;
+  outline: none;
+  transition: box-shadow .15s, border-color .15s, background .15s;
+  font-family: "IRANYekanXFaNum";
+}
+
+#portaliz-login input::placeholder {
+  color: #9ca3af;
+}
+
+#portaliz-login input:focus {
+  border-color: var(--primary);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(30,136,229,.15);
+}
+
+#portaliz-login .actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+#portaliz-login .btn {
+  display: inline-block;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 800;
+  font-size: 15px;
+  transition: background .15s, transform .04s ease-in-out, box-shadow .15s;
+  box-shadow: 0 6px 18px rgba(30,136,229,.25);
+  font-family: "IRANYekanXFaNum";
+}
+
+#portaliz-login .btn:hover {
+  background: var(--primary-hover);
+}
+
+#portaliz-login .btn:active {
+  transform: translateY(1px);
+}
+
+#portaliz-login .note {
+  margin-top: 16px;
+  font-size: 12px;
+  color: #6b7280;
+  text-align: center;
+  line-height: 1.8;
+}
+
+/* لینک‌های ریز */
+#portaliz-login .tiny {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+#portaliz-login .tiny a {
+  color: #1f6feb;
+  text-decoration: none;
+}
+
+#portaliz-login .tiny a:hover {
+  text-decoration: underline;
+}
+
+/* ورودی‌ها تو هر دو حالت اندازه یکسان */
+#portaliz-login aside.login form input[type="text"],
+#portaliz-login aside.login form input[type="password"],
+#portaliz-login aside.login form input[type="email"],
+#portaliz-login aside.login form input[name="user_login"] {
+  width: 100% !important;
+  padding: 15px 14px !important;
+  height: 48px !important;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #f9fafb;
+  color: #111827;
+  font-family: "IRANYekanXFaNum";
+  box-sizing: border-box;
+}
+
+/* دکمه همیشه فول‌ویدث */
+#portaliz-login aside.login form .actions { display: block !important; }
+
+#portaliz-login aside.login form .btn,
+#portaliz-login aside.login form .button {
+  display: block !important;
+  width: 100% !important;
+  height: 48px !important;
+  padding: 12px 16px !important;
+  border-radius: 10px !important;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+/* جلوگیری از دخالت وردپرس */
+#portaliz-login aside.login form input,
+#portaliz-login aside.login form .button {
+  max-width: 100% !important;
+}
+
+#portaliz-login .gotosite {
+  font-family: 'IRANYekanXFaNum';
+  font-size: 14px !important;
+  text-align: center;
+  padding-top: 20px;
+}
+
+#portaliz-login .gotosite a {
+  color: #1f2937;
+  text-decoration: none;
+}
+
+/* تغییر فونت کادرهای toast */
+#portaliz-login .jq-toast-single {
+  padding: 20px;
+  font-family: "IRANYekanXFaNum", Tahoma, sans-serif !important;
+  font-size: 14px;
+  direction: rtl;
+  text-align: right;
+}
+
+#portaliz-login .jq-toast-single h2 {
+  font-family: 'IRANYekanXFaNum';
+  font-weight: 800;
+}
+
+/* واکنش‌گرا */
+@media (max-width: 992px) {
+  #portaliz-login .layout {
+    grid-template-columns: 1fr;
+  }
+  #portaliz-login aside.login {
+    border-left: none;
+    border-top: 1px solid var(--border);
+  }
+  #portaliz-login .hero-text {
+    margin: 12px 0 0;
+  }
+}
